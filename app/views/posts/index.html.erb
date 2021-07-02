@@ -10,17 +10,15 @@
     <div class="card mb-3">
       <div class= "card-body">
         <div class="row">
-        <div class="col-md-2">
-          <% if post.image_url.present? %>
+          <div class="col-md-2">
+            <% if post.image_url.present? %>
               <%= image_tag post.image_url , style: 'height:200px; width: 200px'%>
-
-          <%end%>
-    
-        </div>
-        <div class="col-md-10"> 
-        <h5 class = 'card-title text-dark'> <%= post.title %></h5>
-        <p class='text-secondary'> <%= truncate(post.content, :length => 400) %></p>
-        </div>
+            <%end%>
+          </div>
+          <div class="col-md-10"> 
+            <h5 class = 'card-title text-dark'> <%= post.title %></h5>
+            <p class='text-secondary'> <%= truncate(post.content, :length => 400) %></p>
+          </div>
         </div>
       </div>
     </div>
